@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+from models import storage
+from models.user import User
+from models.post import Post
+from models.comment import Comment
+
+
+#create a new user
+user1 = User(name='Jackson85', email='Jackson85@gmail.com')
+user2 = User(name='emma', email='emmanuel@gmail.com')
+user1.save()
+user2.save()
+print(f'***User1 : {user1}')
+print(f'***User2 : {user2}')
+
+
+#create one post
+post1 = Post(title='Balsamic', tagline='A platform to create free mockups',
+             description='balsamic a a web based app for tech and non-tech \
+             savvy people to create mockups for their webapps and mobile apps',
+             author_id=user1.id)
+post1.save()
+print(f'***post1 : {post1}')
+
+#create two comments
+comment1 = Comment(post_id=post1.id, author_id=user1.id,
+                   text='I like the idea very much, really smart')
+comment2 = Comment(post_id=post1.id, author_id=user2.id,
+                   text='If you say it will be free, then whats the 
+                   business model?')
+comment1.save()
+comment2.save()
+print(f'***comment1 : {comment1}')
+print(f'***comment2 : {comment2}')
+
+print(f'***comments associated with post1 : \
+{[comment.to_dict() for comment in post1.comments]}')
+
+print(f'***posts associated with user1 : \
+{[post.to_dict() for post in user1.posts]}')

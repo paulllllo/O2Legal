@@ -1,0 +1,58 @@
+#!/usr/bin/python3
+""" holds class Post"""
+import models
+from models.base_model import BaseModel, Base
+from models.comment import Comment
+from models.user import User
+from os import getenv
+import sqlalchemy
+from sqlalchemy import Column, String, Integer, ForeignKey
+from sqlalchemy.orm import relationship
+
+
+class Post(BaseModel, Base):
+    """Representation of post """
+    if models.storage_t == "db":
+        __tablename__ = 'posts'
+        title = Column(String(128), nullable=False)
+	tagline = Column(String(128), nullable=False, default='')
+	description = Column(String(1024), nullable=False, default='')
+	author_id = Column(String(128), ForeignKey('users.id'), nullable=False)
+	upvotes = Column(Integer, nullable=False, default=0)
+	downvotes = Column(Integer, nullable=False, default=0)
+        comment_count = Column(Integer, nullable=False, default=0)
+        comments = relationship("Comment",
+                                back_populates="post",
+                                cascade="all, delete, delete-orphan")
+        author = relationship("User", back_populates="posts")
+    else:
+        title = ""
+	tagline = ""
+	description = ""
+	author_id = ""
+        upvotes = 0
+        downvotes = 0
+        comment_count = 0
+
+    def __init__(self, *args, **kwargs):
+        """initializes state"""
+        super().__init__(*args, **kwargs)
+
+    if models.storage_t != "db":
+        @property
+        def comments(self):
+            """getter for list of comment instances related to the post"""
+            comment_list = []
+            all_comments = models.storage.all(Comment)
+            for comment in all_comments.values():
+                if comment.post_id == self.id:
+                    comment_list.append(comment)
+            return comment_list
+
+        @property
+        def author(self):
+            """getter for user instance of post"""
+            all_users = models.storage.all(User)
+            for user in all_users.values():
+                if user.id == self.author_id:
+                    return user

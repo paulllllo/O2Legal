@@ -1,0 +1,52 @@
+#!/usr/bin/python3
+""" holds class User"""
+
+import models
+from models.base_model import BaseModel, Base
+from os import getenv
+import sqlalchemy
+from sqlalchemy import Column, String
+from sqlalchemy.orm import relationship
+from models.comment import Comment
+
+
+class User(BaseModel, Base):
+    """Representation of a user """
+    if models.storage_t == 'db':
+        __tablename__ = 'users'
+        email = Column(String(128), nullable=False)
+        username = Column(String(128), nullable=True)
+        posts = relationship("Post",
+                             back_populates="author",
+                             cascade="all, delete, delete-orphan")
+        comments = relationship("Comment",
+                                back_populates="author",
+                                cascade="all, delete, delete-orphan")
+    else:
+        email = ""
+        username = ""
+
+    def __init__(self, *args, **kwargs):
+        """initializes user"""
+        super().__init__(*args, **kwargs)
+
+    if models.storage_t != 'db':
+        @property
+        def posts(self):
+            """getter for list of post instances related to the user"""
+            from models.post import Post
+            post_list = []
+            all_posts = models.storage.all(Post)
+            for post in all_posts.values():
+                if post.author_id == self.id:
+                    post_list.append(post)
+            return post_list
+
+        def comments(self):
+            """getter for list of comment instances related to the user"""
+            comment_list = []
+            all_comments = models.storage.all(Comment)
+            for comment in all_comments.values():
+                if comment.author_id == self.id:
+                    comment_list.append(comment)
+            return comment_list

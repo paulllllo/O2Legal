@@ -1,0 +1,61 @@
+#!/usr/bin/python3
+""" objects that handle all default RestFul API actions for Comments """
+from models.comment import Comment
+from models.user import User
+from models import storage
+from api.v1.views import app_views
+from flask import abort, jsonify, make_response, request
+
+
+@app_views.route('/comments', methods=['POST'], strict_slashes=False)
+def create_comment():
+    """
+    Create a comment
+    """
+    if not request.get_json():
+        abort(400, description="Not a JSON")
+
+    if 'post_id' not in request.get_json():
+        abort(400, description="Missing post_id")
+
+    data = request.get_json()
+    new_comment = Comment(**data)
+    new_comment.save()
+    new_comment_dict = new_comment.to_dict()
+    user = storage.get(User, new_comment_dict['author_id'])
+    new_comment_dict['author'] = user.username
+    return make_response(jsonify(new_comment_dict), 201)
+
+@app_views.route('/comment/<comment_id>/addUpvote', methods=['POST'], strict_slashes=False)
+def upvote_comment(comment_id):
+    """
+    upvote a comment
+    """
+    if not request.get_json():
+        abort(400, description="Not a JSON")
+
+    if 'user_id' not in request.get_json():
+        abort(400, description="Missing user_id")
+
+    data = request.get_json()
+    comment = storage.get(Coment, comment_id)
+    comment.upvotes.append(data['user_id'])
+    comment.save()
+    return make_response(jsonify(comment.to_dict()), 200)
+
+@app_views.route('/comment/<comment_id>/removeUpvote', methods=['POST'], strict_slashes=False)
+def remove_upvote_comment(comment_id):
+    """
+    remove upvote from a comment
+    """
+    if not request.get_json():
+        abort(400, description="Not a JSON")
+
+    if 'user_id' not in request.get_json():
+        abort(400, description="Missing user_id")
+
+    data = request.get_json()
+    comment = storage.get(Comment, comment_id)
+    comment.upvotes.remove(data['user_id'])
+    comment.save()
+    return make_response(jsonify(comment.to_dict()), 200)
