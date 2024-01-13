@@ -4,17 +4,15 @@
 import cmd
 from datetime import datetime
 import models
-from models.comment import Comment
-from models.post import Post
-from models.user import User
+from models.event import Event
 import shlex  # for splitting the line along spaces except in double quotes
 
-classes = {"Comment": Comment, "Post": Post, "User": User}
+classes = {"Event": Event}
 
 
-class LightBulb(cmd.Cmd):
-    """ LightBulb console """
-    prompt = '(LB) '
+class O2legal(cmd.Cmd):
+    """ O2legal console """
+    prompt = '(O2) '
 
     def do_EOF(self, arg):
         """Exits console"""
@@ -155,4 +153,4 @@ class LightBulb(cmd.Cmd):
             print("** class doesn't exist **")
 
 if __name__ == '__main__':
-    LightBulb().cmdloop()
+    O2legal().cmdloop()

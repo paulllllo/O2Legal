@@ -1,5 +1,5 @@
-# LightBulb - The console
-The console is the first entry point into the lightbulb application.
+# O2legal - The console
+The console is the first entry point into the O2legal application.
 
 #### Functionalities of this command interpreter:
 * Create a new object (ex: a new User or a new Post or Comment)
@@ -22,10 +22,10 @@ The console is the first entry point into the lightbulb application.
 This project is interpreted/tested on Ubuntu 20.04 LTS using python3 (version 3.4.3)
 
 ## Installation
-* Clone this repository: `git clone "https://github.com/paulllllo/lightbulb"`
-* Access Lightbulb directory: `cd Lightbulb`
-* Run lb(interactively): `./console` and enter command
-* Run lb(non-interactively): `echo "<command>" | ./console.py`
+* Clone this repository: `git clone "https://github.com/paulllllo/O2Legal"`
+* Access O2legal directory: `cd O2legal`
+* Run O2(interactively): `./console` and enter command
+* Run O2(non-interactively): `echo "<command>" | ./console.py`
 
 ## File Descriptions
 [console.py](console.py) - the console contains the entry point of the command interpreter. 
@@ -47,9 +47,7 @@ List of commands this console current supports:
 * `def to_dict(self)` - returns a dictionary containing all keys/values of the instance
 
 Classes inherited from Base Model:
-* [comment.py](/models/comment.py)
-* [post.py](/models/post.py)
-* [user.py](/models/user.py)
+* [event.py](/models/event.py)
 
 #### `/models/engine` directory contains File Storage class that handles JASON serialization and deserialization :
 [file_storage.py](/models/engine/file_storage.py) - serializes instances to a JSON file & deserializes back to instances
@@ -87,22 +85,22 @@ TestBaseModel class:
 ## Examples of use
 ```
 vagrantLightHouse$./console.py
-(LB) help
+(O2) help
 
 Documented commands (type help <topic>):
 ========================================
 EOF  all  create  destroy  help  quit  show  update
 
-(LB) all MyModel
+(O2) all MyModel
 ** class doesn't exist **
-(LB) create BaseModel
+(O2) create BaseModel
 7da56403-cc45-4f1c-ad32-bfafeb2bb050
-(LB) all BaseModel
+(O2) all BaseModel
 [[BaseModel] (7da56403-cc45-4f1c-ad32-bfafeb2bb050) {'updated_at': datetime.datetime(2017, 9, 28, 9, 50, 46, 772167), 'id': '7da56403-cc45-4f1c-ad32-bfafeb2bb050', 'created_at': datetime.datetime(2017, 9, 28, 9, 50, 46, 772123)}]
-(LB) show BaseModel 7da56403-cc45-4f1c-ad32-bfafeb2bb050
+(O2) show BaseModel 7da56403-cc45-4f1c-ad32-bfafeb2bb050
 [BaseModel] (7da56403-cc45-4f1c-ad32-bfafeb2bb050) {'updated_at': datetime.datetime(2017, 9, 28, 9, 50, 46, 772167), 'id': '7da56403-cc45-4f1c-ad32-bfafeb2bb050', 'created_at': datetime.datetime(2017, 9, 28, 9, 50, 46, 772123)}
-(LB) destroy BaseModel 7da56403-cc45-4f1c-ad32-bfafeb2bb050
-(LB) show BaseModel 7da56403-cc45-4f1c-ad32-bfafeb2bb050
+(O2) destroy BaseModel 7da56403-cc45-4f1c-ad32-bfafeb2bb050
+(O2) show BaseModel 7da56403-cc45-4f1c-ad32-bfafeb2bb050
 ** no instance found **
 (LB) quit
 ```

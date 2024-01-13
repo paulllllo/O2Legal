@@ -32,8 +32,8 @@ def not_found(error):
 
 if __name__ == "__main__":
     """ Main Function """
-    host = environ.get('LB_API_HOST')
-    port = environ.get('LB_API_PORT')
+    host = environ.get('O2_API_HOST')
+    port = environ.get('O2_API_PORT')
     if not host:
         host = '0.0.0.0'
     if not port:

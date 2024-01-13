@@ -6,12 +6,10 @@ Contains the FileStorage class
 import json
 import models
 from models.base_model import BaseModel
-from models.comment import Comment
-from models.post import Post
-from models.user import User
+from models.event import Event
 from hashlib import md5
 
-classes = {"Comment": Comment, "Post": Post, "User": User}
+classes = {"Event": Event}
 
 
 class FileStorage:

@@ -5,15 +5,13 @@ Contains the class DBStorage
 
 import models
 from models.base_model import BaseModel, Base
-from models.comment import Comment
-from models.post import Post
-from models.user import User
+from models.event import Event
 from os import getenv
 import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 
-classes = {"Comment": Comment, "Post": Post, "User": User}
+classes = {"Event": Event}
 
 
 class DBStorage:
@@ -23,17 +21,17 @@ class DBStorage:
 
     def __init__(self):
         """Instantiate a DBStorage object"""
-        LB_MYSQL_USER = getenv('LB_MYSQL_USER')
-        LB_MYSQL_PWD = getenv('LB_MYSQL_PWD')
-        LB_MYSQL_HOST = getenv('LB_MYSQL_HOST')
-        LB_MYSQL_DB = getenv('LB_MYSQL_DB')
-        LB_ENV = getenv('LB_ENV')
+        O2_MYSQL_USER = getenv('O2_MYSQL_USER')
+        O2_MYSQL_PWD = getenv('O2_MYSQL_PWD')
+        O2_MYSQL_HOST = getenv('O2_MYSQL_HOST')
+        O2_MYSQL_DB = getenv('O2_MYSQL_DB')
+        O2_ENV = getenv('O2_ENV')
         self.__engine = create_engine('mysql+mysqldb://{}:{}@{}/{}'.
-                                      format(LB_MYSQL_USER,
-                                             LB_MYSQL_PWD,
-                                             LB_MYSQL_HOST,
-                                             LB_MYSQL_DB))
-        if LB_ENV == "test":
+                                      format(O2_MYSQL_USER,
+                                             O2_MYSQL_PWD,
+                                             O2_MYSQL_HOST,
+                                             O2_MYSQL_DB))
+        if O2_ENV == "test":
             Base.metadata.drop_all(self.__engine)
 
     def all(self, cls=None):
