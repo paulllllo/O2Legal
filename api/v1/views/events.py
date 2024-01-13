@@ -95,4 +95,5 @@ def cancel_date():
     data = request.get_json()
     event = storage.get(Event, data['id'])
     storage.delete(event)
+    storage.save()
     return make_response(jsonify(event.to_dict()))
