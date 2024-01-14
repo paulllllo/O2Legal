@@ -1,0 +1,245 @@
+.Title {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.CartContainer {
+    width: 100%;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.CartItem {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: rgb(43, 42, 42);
+    margin-top: 20px;
+}
+
+.ItemImg {
+    width: 70px;
+    height: 70px;
+}
+
+.ItemImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.ItemDetails {
+    /* margin-left: 10px; */
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ItemTitle {
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.ItemDesc {
+    font-size: 12px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.EditContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Edit {
+    font-size: 13px;
+    font-weight: 400;
+    padding: 3px 8px;
+    border-radius: 20px;
+    border: 1px solid #FEBE00;
+    cursor: pointer;
+    order: 2;
+    margin-top: 5px;
+}
+
+.Price {
+    font-weight: 700;
+    font-size: 15px;
+    color: #05A172;
+    /* margin-left: 10px; */
+}
+
+.Close {
+    font-size: 20px;
+    font-weight: 400;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(83, 82, 82);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.Close svg {
+    width: 100%;
+}
+
+.Close path {
+    fill: white;
+}
+
+.Empty {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.Empty p {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.Total {
+    font-size: 20px;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 500px) {
+    .Title {
+        font-size: 40px;
+    }
+
+    .CartContainer {
+        margin-top: 0px;
+    }
+
+    .ItemDetails {
+        margin-left: 10px;
+        width: 100px;
+    }
+
+    .ItemTitle {
+        font-size: 17px;
+    }
+
+    .ItemDesc {
+        font-size: 12px;
+    }
+
+    .Edit {
+        font-size: 13px;
+        margin-left: 10px;
+        order: 0;
+        margin-top: 5px;
+    }
+
+    .Price {
+        font-size: 15px;
+        margin-left: 10px;
+    }
+
+    .Close {
+        font-size: 20px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .Total {
+        font-size: 20px;
+        margin-top: 35px;
+        margin-bottom: 15px;
+    }
+
+    .EditContainer {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 30%;
+    }
+}
+
+
+@media (min-width: 800px) {
+    .Title {
+        font-size: 45px;
+    }
+
+    .ItemImg {
+        width: 70px;
+        height: 70px;
+    }
+
+    .Total {
+        font-size: 25px;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .Title {
+        font-size: 50px;
+    }
+
+    .ItemImg {
+        width: 100px;
+        height: 100px;
+    }
+
+    .Total {
+        font-size: 30px;
+    }
+
+    .CartContainer {
+        margin-top: 30px;
+    }
+
+    .ItemDetails {
+        margin-left: 20px;
+        width: 200px;
+    }
+
+    .ItemTitle {
+        font-size: 20px;
+    }
+
+    .ItemDesc {
+        font-size: 13px;
+    }
+
+    .Edit {
+        font-size: 15px;
+        margin-left: 20px;
+    }
+
+    .Price {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    .Close {
+        font-size: 25px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .Total {
+        font-size: 30px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+}

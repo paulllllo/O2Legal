@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "NeueBold";   /*Can be any text*/
+  src: local("NeueMetana-Bold"),
+    url("./fonts/NeueMetana-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "NeueRegular";   /*Can be any text*/
+  src: local("NeueMetana-Regular"),
+    url("./fonts/NeueMetana-Regular.otf") format("opentype");
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

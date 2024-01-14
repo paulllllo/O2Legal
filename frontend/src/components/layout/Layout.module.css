@@ -1,0 +1,251 @@
+.Layout {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fbf9fd;
+    justify-content: space-between;
+    /* min-height: 100%; */
+}
+
+p,
+span,
+a {
+    color: #0c0c0c;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+    color: #0c0c0c;
+    font-family: "NeueBold";
+}
+
+
+.Header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 0;
+    z-index: 99;
+    /* border-bottom: 2px solid rgb(199, 198, 198); */
+}
+
+.LogoBlock {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.Logo {
+    display: block;
+    padding: 15px;
+    /* background-color: #FEBE00; */
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.SiteName {
+    font-size: 15px;
+    font-weight: 700;
+    color: #E8E8EF;
+    cursor: pointer;
+}
+
+.Navigation {
+    display: flex;
+    align-items: baseline;
+}
+
+.Navigation a {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.Cart {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: all .3s ease;
+    position: relative;
+}
+
+.Cart svg {
+    width: 100%;
+    height: 100%;
+}
+
+.Cart path {
+    fill: #E8E8EF;
+}
+
+.Cart:hover path {
+    fill: #FEBE00;
+}
+
+.CartNumber {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #05A172;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.CartNumber span {
+    font-size: 10px;
+    line-height: 0;
+    color: white;
+    font-weight: 500;
+}
+
+.ControlBlock span {
+    display: none;
+}
+
+.MainContent {
+    width: 100%;
+    min-height: 550px;
+    padding: 20px 0;
+}
+
+.NotifContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    position: fixed;
+    z-index: 99;
+    top: 20px;
+    left: 0;
+}
+
+.Notif {
+    width: fit-content;
+    background-color: #f8eed0;
+    padding: 10px 50px;
+    border: 2px solid #FEBE00;
+    border-radius: 20px;
+    transition: all .2s ease;
+}
+
+.Notif p {
+    color: #1A191C;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.NotifOpen {
+    transform: translateY(20px);
+    opacity: 1;
+}
+
+.NotifClosed {
+    transform: translateY(-20px);
+    opacity: 0;
+}
+
+.Footer {
+    width: 100%;
+    padding-top: 20px;
+    background-color: #d3d2d2;
+    margin-top: 100px;
+}
+
+.FooterInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0;
+    border-bottom: 1px solid #0c0c0c;
+}
+
+.FooterLogo {
+    width: 60%;
+}
+
+.FooterLogo h3 {
+    font-size: 35px;
+    width: 100%;
+}
+
+.FooterArrange {
+    width: 100%;
+}
+
+.ContactInfo {
+    width: 40%;
+}
+
+.EmailAddr {
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.FooterBase {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.FooterNav {
+    width: 60%;
+}
+
+.FooterNav a {
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.FooterBase p {
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+@media (min-width: 500px) {
+    .Notif p {
+        font-size: 15px;
+    }
+}
+
+
+@media (min-width: 800px) {
+    .SiteName {
+        font-size: 18px;
+    }
+
+    .Logo {
+        padding: 13px;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .SiteName {
+        font-size: 20px;
+    }
+
+    .Slogan {
+        font-size: 15px;
+    }
+
+    .Logo {
+        padding: 15px;
+    }
+}

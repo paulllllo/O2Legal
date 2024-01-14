@@ -1,0 +1,92 @@
+.Testimonial {
+    background-color: #252425;
+    border-radius: 20px;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 98%;
+}
+
+.Text {
+    color: white;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 100;
+    text-align: justify;
+}
+
+.Author {
+    color: #FEBE00;
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: 15px;
+    text-transform: capitalize;
+}
+
+.Role {
+    color: #bdbbbe;
+    font-size: 11px;
+    font-weight: 400;
+    margin-top: 5px;
+    text-transform: capitalize;
+}
+
+.Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 500px) {
+    .Testimonial {
+        padding: 20px 30px;
+        width: 80%;
+    }
+
+    .Text {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .Author {
+        font-size: 13px;
+        font-weight: 700;
+        margin-top: 20px;
+    }
+
+    .Role {
+        font-size: 11px;
+        margin-top: 5px;
+    }
+}
+
+@media (min-width: 800px) {
+    .Testimonial {
+        padding: 20px 30px;
+        width: 60%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .Testimonial {
+        padding: 30px 40px;
+        width: 50%;
+    }
+
+    .Text {
+        font-size: 17px;
+        line-height: 25px;
+    }
+
+    .Author {
+        font-size: 17px;
+        font-weight: 700;
+        margin-top: 25px;
+    }
+
+    .Role {
+        font-size: 13px;
+        margin-top: 5px;
+    }
+}

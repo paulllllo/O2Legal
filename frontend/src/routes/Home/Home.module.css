@@ -1,0 +1,412 @@
+.Hero {
+    width: 100%;
+    min-height: calc(100vh - 140px);
+    /* height: calc(100vh - 140px); */
+    display: flex;
+    flex-direction: column;
+}
+
+.Arrange {
+    width: 100%;
+    z-index: 1;
+}
+
+.ContentCon {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.HeroContent {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+}
+
+.HeroContent h1 {
+    width: 100%;
+    font-size: 45px;
+    line-height: 60px;
+}
+
+.HeroContent button {
+    margin-top: 20px;
+}
+
+.HeroSpace {
+    width: 50%;
+}
+
+.BaseContainer {
+    /* position: relative; */
+    width: 100%;
+    height: 100px;
+}
+
+.Gradient {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 0;
+    background-color: #dfdfdf;
+    background-image:
+        radial-gradient(white,
+            #d3d2d2);
+}
+
+.BaseBar {
+    display: flex;
+    justify-content: baseline;
+    position: absolute;
+    left: 0;
+    top: calc(100vh - 100px);
+    width: 100%;
+    height: 100px;
+    background-color: #8d0505;
+    /* border-radius: 10px; */
+}
+
+.HeroImgCon {
+    display: flex;
+    justify-content: end;
+    padding: 0 160px;
+    width: 100%;
+    position: relative;
+}
+
+.HeroImg {
+    position: absolute;
+    top: -499%;
+    width: 600px;
+    height: 600px;
+}
+
+.HeroImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: visible;
+}
+
+
+.About {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.AboutImg {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AboutImg img {
+    width: 60%;
+    object-fit: contain;
+}
+
+.AboutText {
+    width: 50%;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 50px;
+}
+
+.AboutText h3 {
+    font-size: 35px;
+}
+
+.AboutText p {
+    width: 70%;
+    font-size: 17px;
+    margin-top: 15px;
+}
+
+.Stats {
+    width: 80%;
+    margin: auto;
+    padding: 40px 100px;
+    background-color: #fbf9fd;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.03) 0px 8px 16px -8px;
+}
+
+.Stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Stat h3 {
+    color: #8d0505;
+    font-size: 35px;
+}
+
+.Stat span {
+    color: #aaa8a8;
+    text-transform: uppercase;
+    font-size: 15px;
+    /* margin-top: 10px; */
+}
+
+.Practice {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 150px;
+    padding-top: 100px;
+}
+
+.PracticeTitle {
+    font-size: 40px;
+    font-family: "NeueBold";
+    border-bottom: 7px solid #8d0505;
+    width: fit-content;
+    padding-bottom: 10px;
+}
+
+.Areas {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 70px;
+    margin-top: 60px;
+}
+
+.Area {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+.Area h3 {
+    font-size: 40px;
+    color: #aaa8a8;
+}
+
+.Area h4 {
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.Area p {
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.GradUpToDown {
+    /* height: 100px; */
+    /* background-color: red; */
+    background-image:
+        linear-gradient(
+            to bottom,
+            #d4d2d2 2%,
+            #f6f6f7,
+            #fbf9fd);
+}
+
+.Offers {
+    width: 100%;
+    margin-top: 100px;
+}
+
+.OffersArrange {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+}
+
+.OfferImg {
+    width: 50%;
+    padding: 180px;
+    display: flex;
+    justify-content: center;
+}
+
+.OfferImg img {
+    width: 100%;
+}
+
+.OfferCon {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.OfferCon h3 {
+    font-size: 35px;
+}
+
+.Offer {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-top: 40px;
+}
+
+.OfferIcon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #aaa8a8;
+}
+
+.Offer h4 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.Offer p {
+    font-size: 15px;
+    margin-top: 12px;
+}
+
+.Testimonials {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 100px;
+    padding-top: 100px;
+}
+
+.TestimonialTitle {
+    font-size: 40px;
+    font-family: "NeueBold";
+    /* border-bottom: 7px solid #8d0505; */
+    width: fit-content;
+    padding-bottom: 10px;
+}
+
+.TestimonialCon {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* padding: 0 70px; */
+    margin-top: 60px;
+}
+
+.Testimonial {
+    display: flex;
+    flex-direction: column;
+    background-color: #fbf9fd;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    padding: 50px 30px;
+    width: 30%;
+}
+
+.UserDetails {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-top: 70px;
+}
+
+.UserPic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #8d0505;
+}
+
+.UserInfo {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.UserJob {
+    color: #aaa8a8;
+}
+
+.Blogs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 100px;
+    padding-top: 100px;
+}
+
+.BlogsTitle {
+    font-size: 40px;
+    font-family: "NeueBold";
+    /* border-bottom: 7px solid #8d0505; */
+    width: fit-content;
+    padding-bottom: 10px;
+}
+
+.BlogsCon {
+    width: 100%;
+    /* padding: auto; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* padding: 0 70px; */
+    margin-top: 20px;
+}
+
+.BlogPost {
+    display: flex;
+    flex-direction: column;
+    /* background-color: #fbf9fd; */
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px; */
+    padding: 50px 30px;
+    width: 48%;
+}
+
+.BlogImg {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+}
+
+.BlogImg img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.TimeStamp {
+    font-size: 13px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.BlogTitle {
+    font-size: 20px;
+    margin-top: 30px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.Blogs button {
+    margin: auto;
+    margin-top: 40px;
+}
+

@@ -1,0 +1,123 @@
+.MainPost {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px o;
+    border-bottom: 2px solid rgb(238, 236, 236);
+}
+
+.TitleBlock {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.Ppic {
+    border-radius: 50%;
+    background-color: grey;
+    display: flex;
+    flex-shrink: 0;
+    height: 20px;
+    width: 20px;
+}
+
+.Ppic img {
+    width: 100%;
+}
+
+.TitleBlock span {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.TitleBlock p {
+    width: 100%;
+    font-size: 15px;
+    margin-left: 15px;
+}
+
+.Desc {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.Desc p {
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.Detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+.Detail span {
+    font-size: 15px;
+    font-weight: 500;
+    margin-right: 20px;
+    color: #F29F05;
+}
+
+.CommentArea {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.CommentArea h1 {
+    margin-top: 10px;
+}
+
+.AddComment {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.InputAlign {
+    width: 80%;
+    padding-right: 20px;
+}
+
+/* .AddComment button {
+    width: fit-content;
+    padding: 10px 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    background-color: #243540;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    margin-left: 20px;
+} */
+
+@media (min-width: 320px) {}
+
+@media (min-width: 660px) {
+    .TitleBlock span {
+        font-size: 25px;
+    }
+
+    .TitleBlock p {
+        width: 100%;
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .Desc p {
+        font-size: 19px;
+        line-height: 25px;
+    }
+
+    .Ppic {
+        width: 25px;
+        height: 25px;
+    }
+}
