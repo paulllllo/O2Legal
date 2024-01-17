@@ -104,7 +104,7 @@ def cancel_date():
 @app_views.route('/reschedule', methods=['PUT'], strict_slashes=False)
 def reschedule():
     """
-    reschedule an appointment
+    Reschedule an appointment
     """
     if not request.get_json():
         abort(400, description="Not a JSON")
@@ -114,7 +114,5 @@ def reschedule():
 
     data = request.get_json()
     event = storage.get(Event, data['id'])
-    setattr(event, 'date', data['date'])
-    event.save()
     return make_response(jsonify(event.to_dict()))
 
