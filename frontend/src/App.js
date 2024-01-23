@@ -1,5 +1,6 @@
 import { lazy, Suspense, useState } from 'react';
 import { Route, Routes, } from 'react-router-dom';
+import Loading from './components/UI/loading/Loading';
 import { MyContext } from './utils/myContext';
 
 
@@ -30,7 +31,7 @@ function App() {
 	return (
 		<div>
 			{/* <MyContext.Provider value={{ theme, setTheme }}> */}
-			<Suspense fallback={<div className="container">Loading...</div>}>
+			<Suspense fallback={<div className="container"><Loading /></div>}>
 				<Routes>
 					{/* <Route element={<Protected user={user} />}> */}
 					<Route path='/' element={<Home />} />

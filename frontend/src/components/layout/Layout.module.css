@@ -4,6 +4,7 @@
     flex-direction: column;
     background-color: #fbf9fd;
     justify-content: space-between;
+    overflow: hidden;
     /* min-height: 100%; */
 }
 
@@ -32,6 +33,7 @@ h4 {
     justify-content: space-between;
     padding: 30px 0;
     z-index: 99;
+    position: relative;
     /* border-bottom: 2px solid rgb(199, 198, 198); */
 }
 
@@ -43,12 +45,10 @@ h4 {
 
 .Logo {
     display: block;
-    padding: 15px;
-    /* background-color: #FEBE00; */
+    padding: 15px 0;
     border-radius: 50%;
-    margin: 0 10px;
     cursor: pointer;
-    font-size: 25px;
+    font-size: 15px;
 }
 
 .SiteName {
@@ -59,8 +59,8 @@ h4 {
 }
 
 .Navigation {
-    display: flex;
     align-items: baseline;
+    /* display: none */
 }
 
 .Navigation a {
@@ -124,7 +124,7 @@ h4 {
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: fit-content;
+    height: 0px;
     position: fixed;
     z-index: 99;
     top: 20px;
@@ -133,15 +133,15 @@ h4 {
 
 .Notif {
     width: fit-content;
-    background-color: #f8eed0;
+    background-color: #8d0505;
     padding: 10px 50px;
-    border: 2px solid #FEBE00;
+    /* border: 2px solid #8d0505; */
     border-radius: 20px;
     transition: all .2s ease;
 }
 
 .Notif p {
-    color: #1A191C;
+    color: #fff;
     font-size: 13px;
     font-weight: 700;
     text-align: center;
@@ -160,25 +160,27 @@ h4 {
 .Footer {
     width: 100%;
     padding-top: 20px;
-    background-color: #d3d2d2;
-    margin-top: 100px;
+    background-color: #8d0505;
+    margin-top: 50px;
 }
 
 .FooterInfo {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 20px 0;
-    border-bottom: 1px solid #0c0c0c;
+    border-bottom: 1px solid #f76b6b;
 }
 
 .FooterLogo {
-    width: 60%;
+    width: 100%;
+    color: #fbd7d7;
 }
 
 .FooterLogo h3 {
-    font-size: 35px;
+    font-size: 25px;
     width: 100%;
+    color: #fbd7d7;
 }
 
 .FooterArrange {
@@ -186,23 +188,30 @@ h4 {
 }
 
 .ContactInfo {
-    width: 40%;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.ContactInfo p {
+    font-size: 13px;
+    color: #fbd7d7;
 }
 
 .EmailAddr {
-    font-size: 15px;
+    font-size: 13px;
     margin-top: 15px;
+    color: #fbd7d7;
 }
 
 .FooterBase {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 20px 0;
+    flex-direction: column;
+    align-items: left;
+    padding: 15px 0;
 }
 
 .FooterNav {
-    width: 60%;
+    width: 100%;
 }
 
 .FooterNav a {
@@ -210,16 +219,143 @@ h4 {
     font-weight: 600;
     margin-right: 10px;
     cursor: pointer;
+    color: #fbd7d7;
 }
 
 .FooterBase p {
     font-size: 10px;
     font-weight: 600;
+    margin-top: 30px;
+    color: #fbd7d7;
 }
+
+/*                              Mobile Menu                              */
+
+.Menu {
+    z-index: 7;
+  }
+  
+  .MenuBar {
+    width: 35px;
+    height: 40px;
+    margin: 30px 0 20px 20px;
+    cursor: pointer;
+  }
+  
+  .Bar {
+    height: 5px;
+    width: 100%;
+    background-color: #8d0505;
+    display: block;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    z-index: 7;
+  }
+  
+  .Bar1 {
+    transform: translateY(-4px);
+  }
+  
+  .Bar3 {
+    transform: translateY(4px);
+  }
+  
+  .Nav {
+    transition: 0.5s ease;
+    display: none;
+  }
+  
+  .Nav ul {
+    padding: 0 22px;
+  }
+  
+  .Nav li {
+    list-style: none;
+    padding: 12px 0;
+  }
+  
+  .Nav li a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+  .Nav li a:hover {
+    font-weight: bold;
+  }
+  
+  .MenuBG, .Menu {
+    top: 15px;
+    right: 0px;
+    /* left: 0; */
+    position: absolute;
+  }
+  
+  .MenuBG {
+    z-index: 5;
+    width: 0;
+    height: 0;
+    margin: 30px 0 20px 20px;
+    background: radial-gradient(circle, #8d0505, #8d0505);
+    border-radius: 50%;
+    transition: 0.3s ease;
+  }
+
+  .MenuBack {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 3;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    transition: 0.3s ease;
+  }
+  
+  .Change {
+    display: block;
+  }
+  
+  .Change .Bar {
+    background-color: #fff;
+  }
+  
+  .Change .Bar1 {
+    transform: translateY(4px) rotateZ(-45deg);
+  }
+  
+  .Change .Bar2 {
+    opacity: 0;
+  }
+  
+  .Change .Bar3 {
+    transform: translateY(-6px) rotateZ(45deg);
+  }
+  
+.ChangeBG {
+    width: 520px;
+    height: 460px;
+    transform: translate(62%,-22%);
+  }
+
+  .ChangeBack {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 
 
 @media (min-width: 500px) {
     .Notif p {
+        font-size: 15px;
+    }
+
+    .ContactInfo {
+        font-size: 15px;
+    }
+    
+    .EmailAddr {
         font-size: 15px;
     }
 }
@@ -246,6 +382,58 @@ h4 {
     }
 
     .Logo {
-        padding: 15px;
+        font-size: 25px;
+        margin: 0 10px;
+        padding: 15px 0;
+    }
+
+    .Navigation {
+        display: flex;
+    }
+
+    .Footer {
+        margin-top: 100px;
+    }
+
+    .FooterInfo {
+        flex-direction: row;
+    }
+    
+    .FooterLogo {
+        width: 60%;
+    }
+    
+    .FooterLogo h3 {
+        font-size: 35px;
+    }
+
+    .ContactInfo {
+        width: 40%;
+        margin: 0;
+    }
+
+    .FooterBase {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .FooterNav {
+        width: 60%;
+    }
+
+    .FooterBase p {
+        font-size: 10px;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .ContactInfo {
+        font-size: 15px;
+    }
+
+    .EmailAddr {
+        font-size: 15px;
     }
 }

@@ -43,12 +43,10 @@ h4 {
 
 .Logo {
     display: block;
-    padding: 15px;
-    /* background-color: #FEBE00; */
+    padding: 15px 0;
     border-radius: 50%;
-    margin: 0 10px;
     cursor: pointer;
-    font-size: 25px;
+    font-size: 15px;
 }
 
 .SiteName {
@@ -59,8 +57,8 @@ h4 {
 }
 
 .Navigation {
-    display: flex;
     align-items: baseline;
+    display: none
 }
 
 .Navigation a {
@@ -116,7 +114,6 @@ h4 {
 .MainContent {
     width: 100%;
     min-height: 550px;
-    padding: 20px 0;
 }
 
 .NotifContainer {
@@ -133,15 +130,15 @@ h4 {
 
 .Notif {
     width: fit-content;
-    background-color: #f8eed0;
+    background-color: #8d0505;
     padding: 10px 50px;
-    border: 2px solid #FEBE00;
+    /* border: 2px solid #FEBE00; */
     border-radius: 20px;
     transition: all .2s ease;
 }
 
 .Notif p {
-    color: #1A191C;
+    color: #fff;
     font-size: 13px;
     font-weight: 700;
     text-align: center;
@@ -160,25 +157,26 @@ h4 {
 .Footer {
     width: 100%;
     padding-top: 20px;
-    background-color: #d3d2d2;
-    margin-top: 100px;
+    background-color: #8d0505;
+    margin-top: 50px;
 }
 
 .FooterInfo {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 20px 0;
-    border-bottom: 1px solid #0c0c0c;
+    border-bottom: 1px solid #f76b6b;
 }
 
 .FooterLogo {
-    width: 60%;
+    width: 100%;
 }
 
 .FooterLogo h3 {
-    font-size: 35px;
+    font-size: 25px;
     width: 100%;
+    color: #fbd7d7;
 }
 
 .FooterArrange {
@@ -186,7 +184,12 @@ h4 {
 }
 
 .ContactInfo {
-    width: 40%;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.ContactInfo p {
+    color: #fbd7d7;
 }
 
 .EmailAddr {
@@ -196,13 +199,13 @@ h4 {
 
 .FooterBase {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 20px 0;
+    flex-direction: column;
+    align-items: left;
+    padding: 15px 0;
 }
 
 .FooterNav {
-    width: 60%;
+    width: 100%;
 }
 
 .FooterNav a {
@@ -210,11 +213,14 @@ h4 {
     font-weight: 600;
     margin-right: 10px;
     cursor: pointer;
+    color: #fbd7d7;
 }
 
 .FooterBase p {
     font-size: 10px;
     font-weight: 600;
+    margin-top: 30px;
+    color: #fbd7d7;
 }
 
 
@@ -246,6 +252,54 @@ h4 {
     }
 
     .Logo {
-        padding: 15px;
+        font-size: 25px;
+        margin: 0 10px;
+        padding: 15px 0;
+    }
+
+    .Navigation {
+        display: flex;
+    }
+
+    .MainContent {
+        padding: 20px 0;
+    }
+
+    .Footer {
+        margin-top: 100px;
+    }
+
+    .FooterInfo {
+        flex-direction: row;
+    }
+    
+    .FooterLogo {
+        width: 60%;
+    }
+    
+    .FooterLogo h3 {
+        font-size: 35px;
+    }
+
+    .ContactInfo {
+        width: 40%;
+        margin: 0;
+    }
+
+    .FooterBase {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .FooterNav {
+        width: 60%;
+    }
+
+    .FooterBase p {
+        font-size: 10px;
+        font-weight: 600;
+        margin: 0;
     }
 }

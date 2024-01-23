@@ -9,6 +9,9 @@ import "react-datepicker/dist/react-datepicker.css";
 import { getDay } from 'date-fns'
 import axios from 'axios'
 import { dateFilter, timeFilter, offsetDate } from '../../utils/dateUtils';
+import Stamp from '../../Assets/Stamp.png';
+import { notifState } from '../../state/atoms'
+import { useRecoilState } from 'recoil'
 
 export const dateInputFormat = {
     info: {
@@ -60,6 +63,7 @@ export const dateInputFormat = {
 const Contact = () => {
     const [dateInfo, setDateInfo] = useState(dateInputFormat)
     const [startDate, setStartDate] = useState(offsetDate(new Date(), 2));
+    const [notif, setNotif] = useRecoilState(notifState);
     // const [bookedDates, setBookedDates] = useState([]);
 
     
@@ -71,6 +75,13 @@ const Contact = () => {
     ));
 
 
+    const notify = (message) => {
+		setNotif(message)
+		setTimeout(() => {
+			setNotif('')
+		}, 2000)
+	}
+
     const createAppointment = () => {
         const body = {
             'client': dateInfo.email.value,
@@ -80,8 +91,15 @@ const Contact = () => {
             'date': startDate.toISOString()
         }
 
+        if (body.client === '' || body.topic === '' || body.description === '') {
+            return notify('All form fields are required');
+        }
+
         axios.post("https://www.kelechio.tech/o2legal/api/v1/events", body)
-            .then(data => console.log(data.data))
+            .then(data => {
+                console.log(data.data)
+                notify('Appointment Scheduled Successfully')
+            })
             .catch(error => console.log(error));
 
         // reset inputs
@@ -137,16 +155,16 @@ const Contact = () => {
     return (
         <Layout>
             <div className={`${styles.Picker} container`}>
-                {/* <div className={styles.PickerPic}>
-                    <img src='' alt='' />
-                </div> */}
+                <div className={styles.PickerPic}>
+                    <img src={Stamp} alt='' />
+                </div>
                 <div className={styles.PickerCon}>
                     <div className={styles.PickerMain}>
                         <div className={styles.PickerTitle}>
                             <div className={styles.ColorBand}></div>
                             <h1>Schedule appointment</h1>
                         </div>
-                        <p className={styles.Desc}>Choose a day and time you want to meet with us</p>
+                        <p className={styles.Desc}>Pick a day and time you want to meet with us</p>
                         {/* <Input
                             title={dateInfo.date.title}
                             elementType={dateInfo.date.elementType}

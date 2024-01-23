@@ -1,19 +1,16 @@
 .Picker {
     /* width: 100%; */
-    margin-top: 80px;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-/* .PickerPic {
-    width: 50%;
-    display: flex;
-} */
+.PickerPic {
+    display: None;
+}
 
 .PickerCon {
-    width: 100%;
-    padding: 0 50px;    
+    width: 100%;    
 }
 
 .PickerMain {
@@ -66,7 +63,8 @@
     width: fit-content;
     padding: 10px 20px;
     border-radius: 10px;
-    background-color: #e6eaf7;
+    background-color: #5ecc95;
+    color: azure;
     font-size: 15px;
     font-weight: 500;
     border: none;
@@ -81,15 +79,29 @@
 }
 
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
     .PickerCon{
         width: 70%;
+    }
+
+    .PickerPic {
+        width: 50%;
+        display: flex;
+    }
+    
+    .PickerCon {
+        width: 50%;    
     }
 }
 
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
     .PickerCon{
         width: 50%;
+        padding: 0 50px;
+    }
+
+    .Picker {
+        margin-top: 30px;
     }
 }

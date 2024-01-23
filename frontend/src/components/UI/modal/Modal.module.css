@@ -15,9 +15,30 @@
     width: fit-content;
     border-radius: 20px;
     box-shadow: 1px 1px 1px black;
-    padding: 30px 60px;
-    left: 40%;
+    padding: 20px 60px;
+    left: 4%;
     top: 40%;
     box-sizing: border-box;
     transition: all 0.3s ease-out;
+}
+
+@media (min-width: 500px) {
+    .PickerCon{
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 800px) {
+    .PickerCon{
+        width: 70%;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .Modal {
+        padding: 30px 60px;
+        left: 40%;
+    }
 }

@@ -1,46 +1,43 @@
 .Hero {
     width: 100%;
-    min-height: calc(100vh - 140px);
-    /* height: calc(100vh - 140px); */
+    min-height: calc(100% - 140px);
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .Arrange {
     width: 100%;
-    z-index: 1;
+    height: 83vh;
+    z-index: 2;
 }
 
 .ContentCon {
     display: flex;
     flex-direction: row;
-    height: 100%;
+    height: 80%;
 }
 
 .HeroContent {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 90%;
     height: 100%;
     justify-content: center;
 }
 
 .HeroContent h1 {
     width: 100%;
-    font-size: 45px;
-    line-height: 60px;
+    font-size: 25px;
+    line-height: 38px;
 }
 
 .HeroContent button {
-    margin-top: 20px;
-}
-
-.HeroSpace {
-    width: 50%;
+    margin-top: 15px;
+    z-index: 2;
 }
 
 .BaseContainer {
-    /* position: relative; */
     width: 100%;
     height: 100px;
 }
@@ -49,7 +46,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     z-index: 0;
     background-color: #dfdfdf;
@@ -60,49 +57,49 @@
 
 .BaseBar {
     display: flex;
-    justify-content: baseline;
+    /* justify-content: baseline; */
     position: absolute;
     left: 0;
-    top: calc(100vh - 100px);
+    top: calc(100% - 70px);
     width: 100%;
-    height: 100px;
+    height: 70px;
     background-color: #8d0505;
-    /* border-radius: 10px; */
 }
 
 .HeroImgCon {
     display: flex;
-    justify-content: end;
-    padding: 0 160px;
     width: 100%;
     position: relative;
+    padding-left: 100px;
 }
 
 .HeroImg {
     position: absolute;
-    top: -499%;
-    width: 600px;
-    height: 600px;
+    bottom: 0;
+    right: 5px;
+    width: fit-content;
+    height: 280px;
+    z-index: 1;
 }
 
 .HeroImg img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    overflow: visible;
+    object-fit: contain;
+    overflow: hidden;
 }
 
 
 .About {
     width: 100%;
     display: flex;
-    flex-direction: row;
     align-items: center;
     margin-top: 100px;
+    flex-direction: column;
 }
 
 .AboutImg {
-    width: 50%;
+    width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,28 +111,30 @@
 }
 
 .AboutText {
-    width: 50%;
-    /* text-align: center; */
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    padding-left: 50px;
+    align-items: flex-start;
+    margin-top: 30px;
 }
 
 .AboutText h3 {
-    font-size: 35px;
+    width: 100%;
+    font-size: 25px;
+    text-align: center;
 }
 
 .AboutText p {
-    width: 70%;
-    font-size: 17px;
-    margin-top: 15px;
+    width: 100%;
+    font-size: 15px;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .Stats {
-    width: 80%;
+    width: 100%;
     margin: auto;
-    padding: 40px 100px;
+    padding: 15px 15px;
     background-color: #fbf9fd;
     margin-top: 100px;
     display: flex;
@@ -154,13 +153,13 @@
 
 .Stat h3 {
     color: #8d0505;
-    font-size: 35px;
+    font-size: 15px;
 }
 
 .Stat span {
     color: #aaa8a8;
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 12px;
     /* margin-top: 10px; */
 }
 
@@ -168,14 +167,14 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-top: 150px;
-    padding-top: 100px;
+    margin-top: 90px;
+    padding-top: 90px;
 }
 
 .PracticeTitle {
-    font-size: 40px;
+    font-size: 25px;
     font-family: "NeueBold";
-    border-bottom: 7px solid #8d0505;
+    border-bottom: 2px solid #8d0505;
     width: fit-content;
     padding-bottom: 10px;
 }
@@ -183,28 +182,26 @@
 .Areas {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 0 70px;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
 .Area {
-    width: 30%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     padding: 10px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .Area h3 {
-    font-size: 40px;
+    font-size: 25px;
     color: #aaa8a8;
 }
 
 .Area h4 {
-    font-size: 25px;
+    font-size: 15px;
     margin-top: 10px;
 }
 
@@ -218,8 +215,7 @@
     /* height: 100px; */
     /* background-color: red; */
     background-image:
-        linear-gradient(
-            to bottom,
+        linear-gradient(to bottom,
             #d4d2d2 2%,
             #f6f6f7,
             #fbf9fd);
@@ -232,7 +228,7 @@
 
 .OffersArrange {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 100px 0;
@@ -240,7 +236,6 @@
 
 .OfferImg {
     width: 50%;
-    padding: 180px;
     display: flex;
     justify-content: center;
 }
@@ -250,51 +245,62 @@
 }
 
 .OfferCon {
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
 }
 
 .OfferCon h3 {
-    font-size: 35px;
+    font-size: 25px;
 }
 
 .Offer {
     display: flex;
     flex-direction: column;
-    width: 60%;
-    margin-top: 40px;
+    align-items: center;
+    width: 100%;
+    margin-top: 35px;
 }
 
 .OfferIcon {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
+    /* padding: 10px; */
     border-radius: 50%;
-    background-color: #aaa8a8;
+    /* background-color: #e3f2fc; */
+}
+
+.OfferIcon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.OfferIcon path {
+    fill: #8d0505;
 }
 
 .Offer h4 {
-    font-size: 20px;
-    margin-top: 10px;
+    font-size: 15px;
+    margin-top: 15px;
 }
 
 .Offer p {
     font-size: 15px;
     margin-top: 12px;
+    text-align: center;
 }
 
 .Testimonials {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-top: 100px;
     padding-top: 100px;
 }
 
 .TestimonialTitle {
-    font-size: 40px;
-    font-family: "NeueBold";
-    /* border-bottom: 7px solid #8d0505; */
+    font-size: 25px;
     width: fit-content;
     padding-bottom: 10px;
 }
@@ -305,8 +311,7 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* padding: 0 70px; */
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
 .Testimonial {
@@ -314,8 +319,9 @@
     flex-direction: column;
     background-color: #fbf9fd;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-    padding: 50px 30px;
-    width: 30%;
+    padding: 30px 30px;
+    margin-top: 25px;
+    width: 100%;
 }
 
 .UserDetails {
@@ -323,7 +329,7 @@
     flex-direction: row;
     align-items: center;
     width: 100%;
-    margin-top: 70px;
+    margin-top: 40px;
 }
 
 .UserPic {
@@ -331,6 +337,11 @@
     height: 50px;
     border-radius: 50%;
     background-color: #8d0505;
+    overflow: hidden;
+}
+
+.UserPic img {
+    object-fit: cover;
 }
 
 .UserInfo {
@@ -344,6 +355,7 @@
 
 .UserJob {
     color: #aaa8a8;
+    font-size: 13px;
 }
 
 .Blogs {
@@ -355,9 +367,7 @@
 }
 
 .BlogsTitle {
-    font-size: 40px;
-    font-family: "NeueBold";
-    /* border-bottom: 7px solid #8d0505; */
+    font-size: 25px;
     width: fit-content;
     padding-bottom: 10px;
 }
@@ -376,20 +386,19 @@
 .BlogPost {
     display: flex;
     flex-direction: column;
-    /* background-color: #fbf9fd; */
-    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px; */
-    padding: 50px 30px;
-    width: 48%;
+    padding: 30px 0;
+    width: 100%;
 }
 
 .BlogImg {
     width: 100%;
-    height: 320px;
+    height: 195px;
     overflow: hidden;
 }
 
 .BlogImg img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -400,13 +409,414 @@
 }
 
 .BlogTitle {
-    font-size: 20px;
-    margin-top: 30px;
+    font-size: 17px;
+    margin-top: 20px;
     font-family: 'Open Sans', sans-serif;
 }
 
 .Blogs button {
     margin: auto;
-    margin-top: 40px;
 }
 
+@media (min-width: 500px) {
+    .HeroContent h1 {
+        font-size: 30px;
+    }
+
+    .HeroImg {
+        bottom: 0;
+        right: 5px;
+        height: 320px;
+    }
+
+    .AboutText h3 {
+        font-size: 30px;
+    }
+
+    .AboutText p {
+        font-size: 17px;
+    }
+
+    .Stats {
+        padding: 30px 30px;
+    }
+
+    .Stat h3 {
+        font-size: 25px;
+    }
+
+    .PracticeTitle {
+        font-size: 30px;
+    }
+
+    .Area h4 {
+        font-size: 17px;
+    }
+
+    .Areas {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .Area {
+        width: 45%;
+    }
+
+    .OfferImg {
+        width: 30%;
+    }
+
+    .OfferCon h3 {
+        font-size: 30px;
+    }
+
+    .Offer {
+        width: 70%;
+    }
+
+    .Offer h4 {
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .TestimonialTitle {
+        font-size: 30px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .TestimonialCon {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        /* flex-wrap: wrap; */
+        margin-top: 30px;
+    }
+
+    .Testimonial {
+        width: 70%;
+    }
+
+    .BlogsTitle {
+        font-size: 30px;
+    }
+
+    .BlogImg {
+        height: 400px;
+    }
+
+    .BlogTitle {
+        font-size: 20px;
+    }
+}
+
+
+@media (min-width: 1000px) {
+    .Hero {
+        justify-content: flex-start;
+    }
+
+    .HeroContent {
+        width: 50%;
+        /* font-size: 35px;
+        line-height: 50px; */
+    }
+
+    .HeroContent h1 {
+        font-size: 35px;
+        line-height: 50px;
+    }
+
+    .HeroSpace {
+        width: 50%;
+    }
+
+    .HeroContent button {
+        margin-top: 20px;
+    }
+
+    .BaseBar {
+        top: calc(100vh - 100px);
+        height: 100px;
+    }
+
+    .HeroImgCon {
+        justify-content: flex-end;
+        padding: 0 160px;
+    }
+
+    .HeroImg {
+        width: 560px;
+        height: 560px;
+    }
+
+    .HeroImg img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        overflow: visible;
+    }
+
+    .About {
+        flex-direction: row;
+    }
+
+    .AboutImg {
+        width: 50%;
+    }
+
+    .AboutText {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 50px;
+    }
+
+    .AboutText h3 {
+        font-size: 35px;
+        text-align: left;
+    }
+
+    .AboutText p {
+        width: 70%;
+        font-size: 17px;
+        margin-top: 15px;
+        text-align: left;
+    }
+
+    .Stats {
+        width: 80%;
+        margin: auto;
+        padding: 40px 100px;
+        margin-top: 100px;
+    }
+
+    .Stat h3 {
+        font-size: 35px;
+    }
+
+    .Stat span {
+        font-size: 15px;
+    }
+
+    .Practice {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 150px;
+        padding-top: 100px;
+    }
+
+    .PracticeTitle {
+        font-size: 40px;
+        border-bottom: 7px solid #8d0505;
+    }
+
+    .Areas {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 70px;
+        margin-top: 60px;
+    }
+
+    .Area {
+        width: 45%;
+        padding: 10px;
+        margin-top: 40px;
+    }
+
+    .Area h3 {
+        font-size: 40px;
+    }
+
+    .Area h4 {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    .Area p {
+        font-size: 15px;
+        margin-top: 5px;
+    }
+
+    .OffersArrange {
+        flex-direction: row;
+    }
+
+    .OfferImg {
+        padding: 10%;
+    }
+
+    .OfferCon {
+        align-items: left;
+        margin: 0;
+        width: 50%;
+    }
+
+    .OfferCon h3 {
+        font-size: 35px;
+    }
+
+    .Offer {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        width: 80%;
+        margin-top: 40px;
+    }
+
+    .OfferIcon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .Offer h4 {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .Offer p {
+        font-size: 15px;
+        margin-top: 12px;
+    }
+
+    .Testimonials {
+        margin-top: 0px;
+    }
+
+    .TestimonialTitle {
+        font-size: 40px;
+        /* border-bottom: 7px solid #8d0505; */
+        width: fit-content;
+        padding-bottom: 10px;
+    }
+
+    .TestimonialCon {
+        margin-top: 60px;
+        flex-direction: row;
+    }
+
+    .Testimonial {
+        padding: 50px 30px;
+        width: 30%;
+        margin: 0;
+    }
+
+    .UserDetails {
+        margin-top: 70px;
+    }
+
+    .UserJob {
+        font-size: 15px;
+    }
+
+    .BlogsTitle {
+        font-size: 40px;
+    }
+
+    .BlogPost {
+        padding: 50px 30px;
+        width: 48%;
+    }
+
+    .BlogImg {
+        height: 230px;
+    }
+
+    .BlogTitle {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+    .Blogs button {
+        margin-top: 40px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .HeroContent h1 {
+        font-size: 45px;
+        line-height: 60px;
+    }
+
+    .HeroImg {
+        width: 560px;
+        height: 560px;
+    }
+
+    .AboutText p {
+        font-size: 20px;
+    }
+
+    .Practice {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 150px;
+        padding-top: 100px;
+    }
+
+    .PracticeTitle {
+        font-size: 40px;
+        border-bottom: 7px solid #8d0505;
+    }
+
+    .Areas {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 70px;
+        margin-top: 60px;
+    }
+
+    .Area {
+        width: 30%;
+    }
+
+    .Area h3 {
+        font-size: 40px;
+    }
+
+    .Area h4 {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    .Area p {
+        font-size: 17px;
+        margin-top: 5px;
+    }
+
+    .OffersArrange {
+        flex-direction: row;
+    }
+
+    .OfferImg {
+        padding: 90px;
+    }
+
+    .Offer {
+        width: 60%;
+    }
+
+    /* .OfferIcon {
+        width: 50px;
+        height: 50px;
+    } */
+
+    /* .Testimonials {
+        margin-top: 100px;
+    } */
+
+    .BlogImg {
+        height: 320px;
+    }
+
+    .Blogs button {
+        margin-top: 40px;
+    }
+}
