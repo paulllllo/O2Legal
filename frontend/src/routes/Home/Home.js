@@ -81,22 +81,32 @@ const Home = () => {
 						<div className={styles.Area}>
 							<h3>.01</h3>
 							<h4>International Trade Litigation</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							<p>This specialization includes contract negotiation and disputes, IP law, compensation and royalties, and more. You could be dealing with some big-name clients if you find success, so it’s important for you to avoid getting intimidated.</p>
 						</div>
 						<div className={styles.Area}>
 							<h3>.02</h3>
-							<h4>International Trade Litigation</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							<h4>Complex Litigation</h4>
+							<p>This is an area of law that demands a lot of patience and incredible attention to detail. Complex litigation is one of the more lucrative specializations because they involve high-stakes, corporate lawsuits and a lot of motions filed in court.</p>
 						</div>
 						<div className={styles.Area}>
 							<h3>.03</h3>
-							<h4>International Trade Litigation</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							<h4>Corporate Law</h4>
+							<p>Corporate law also handles business affairs, but it is more concerned with day-to-day, typical practices. Things like contracts, compliance, and liability fall under this umbrella.</p>
 						</div>
 						<div className={styles.Area}>
 							<h3>.04</h3>
-							<h4>International Trade Litigation</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							<h4>Intellectual property</h4>
+							<p>In the age of the internet, intellectual property (IP) is more important than ever before. From trademarks, to copyrights, to patents, and beyond, lawyers who work in IP help people protect their ideas and projects from duplication or theft.</p>
+						</div>
+						<div className={styles.Area}>
+							<h3>.05</h3>
+							<h4>Tax law</h4>
+							<p>Tax law is complex and always evolving, so it is an exciting practice area to enter. Tax attorneys can help guide people through audits and other issues with the IRS, as well as with estate planning.</p>
+						</div>
+						<div className={styles.Area}>
+							<h3>.06</h3>
+							<h4>Healthcare Law</h4>
+							<p>It’s been a hot topic for quite some time, and healthcare laws in the US are still in flux. Therefore, professionals who are up to date on regulations and can navigate the landscape successfully will reap the benefits.</p>
 						</div>
 					</div>
 				</div>
